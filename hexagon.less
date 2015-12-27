@@ -3,27 +3,27 @@
 /* Sources/Licence: https://github.com/db0company/css-hexagon  */
 /***************************************************************/
 
-@xxs: 14px;
-@xs: 22px;
-@sm: 44px;
-@md: 64px;
-@lg: 88px;
-@xl: 120px;
+@hexagon-xxs: 14px;
+@hexagon-xs: 22px;
+@hexagon-sm: 44px;
+@hexagon-md: 64px;
+@hexagon-lg: 88px;
+@hexagon-xl: 120px;
 
-@default: #ebebeb;
-@default-hover: #cccccc;
-@primary: #428bca;
-@primary-hover: #3276b1;
-@success: #5cb85c;
-@success-hover: #47a447;
-@info: #5bc0de;
-@info-hover: #39b3d7;
-@warning: #f0ad4e;
-@warning-hover: #ed9c28;
-@danger: #d9534f;
-@danger-hover: #d2322d;
+@hexagon-default-color: #ebebeb;
+@hexagon-default-color-hover: #cccccc;
+@hexagon-primary-color: #428bca;
+@hexagon-primary-color-hover: #3276b1;
+@hexagon-success-color: #5cb85c;
+@hexagon-success-color-hover: #47a447;
+@hexagon-info-color: #5bc0de;
+@hexagon-info-color-hover: #39b3d7;
+@hexagon-warning-color: #f0ad4e;
+@hexagon-warning-color-hover: #ed9c28;
+@hexagon-danger-color: #d9534f;
+@hexagon-danger-color-hover: #d2322d;
 
-@fontmultiply: 0.7;
+@hexagon-fontmultiply: 0.7;
 
 // *********************************************************** //
 // Hexagon                                                     //
@@ -32,14 +32,14 @@
 .hexagon-content(@size, @color: white) {
     color: @color;
     text-align: center;
-    font-size: @size * @fontmultiply;
+    font-size: @size * @hexagon-fontmultiply;
     &:hover {
 	color: @color;
 	text-decoration: none;
     }
 }
 
-.hexagon(@side : @md, @color : @default) {
+.hexagon(@side : @hexagon-md, @color : @hexagon-default-color) {
     .hexagon-content(@side);
     @radius: @side * 0.86602540378;
     margin: (@side / 2) 0;
@@ -83,27 +83,27 @@
 
 /* Extra Extra Small */
 .hexagon-xxs {
-    .hexagon(@xxs);
+    .hexagon(@hexagon-xxs);
 }
 /* Extra Small */
 .hexagon-xs {
-    .hexagon(@xs);
+    .hexagon(@hexagon-xs);
 }
 /* Small */
 .hexagon-sm {
-    .hexagon(@sm);
+    .hexagon(@hexagon-sm);
 }
 /* Medium */
 .hexagon-md {
-    .hexagon(@md);
+    .hexagon(@hexagon-md);
 }
 /* Large */
 .hexagon-lg {
-    .hexagon(@lg);
+    .hexagon(@hexagon-lg);
 }
 /* Extra large */
 .hexagon-xl {
-    .hexagon(@xl);
+    .hexagon(@hexagon-xl);
 }
 
 /***************************************************************/
@@ -112,44 +112,44 @@
 
 /* Default */
 .hexagon-default {
-    .hexagon-changecolor(@default);
+    .hexagon-changecolor(@hexagon-default-color);
     &.hexagon-hover:hover {
-	.hexagon-changecolor(@default-hover);
+	.hexagon-changecolor(@hexagon-default-color-hover);
     }
 }
 /* Primary */
 .hexagon-primary {
-    .hexagon-changecolor(@primary);
+    .hexagon-changecolor(@hexagon-primary-color);
     &.hexagon-hover:hover {
-	.hexagon-changecolor(@primary-hover);
+	.hexagon-changecolor(@hexagon-primary-color-hover);
     }
 }
 /* Success */
 .hexagon-success {
-    .hexagon-changecolor(@success);
+    .hexagon-changecolor(@hexagon-success-color);
     &.hexagon-hover:hover {
-	.hexagon-changecolor(@success-hover);
+	.hexagon-changecolor(@hexagon-success-color-hover);
     }
 }
 /* Info */
 .hexagon-info {
-    .hexagon-changecolor(@info);
+    .hexagon-changecolor(@hexagon-info-color);
     &.hexagon-hover:hover {
-	.hexagon-changecolor(@info-hover);
+	.hexagon-changecolor(@hexagon-info-color-hover);
     }
 }
 /* Warning */
 .hexagon-warning {
-    .hexagon-changecolor(@warning);
+    .hexagon-changecolor(@hexagon-warning-color);
     &.hexagon-hover:hover {
-	.hexagon-changecolor(@warning-hover);
+	.hexagon-changecolor(@hexagon-warning-color-hover);
     }
 }
 /* Danger */
 .hexagon-danger {
-    .hexagon-changecolor(@danger);
+    .hexagon-changecolor(@hexagon-danger-color);
     &.hexagon-hover:hover {
-	.hexagon-changecolor(@danger-hover);
+	.hexagon-changecolor(@hexagon-danger-color-hover);
     }
 }
 
