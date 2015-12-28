@@ -28,6 +28,19 @@
 @hexagon-danger-color: #d9534f;
 @hexagon-danger-color-hover: #d2322d;
 
+@hexagon-default-text-color: #ffffff;
+@hexagon-default-text-color-hover: @hexagon-default-text-color;
+@hexagon-primary-text-color: @hexagon-default-text-color;
+@hexagon-primary-text-color-hover: @hexagon-default-text-color;
+@hexagon-success-text-color: @hexagon-default-text-color;
+@hexagon-success-text-color-hover: @hexagon-default-text-color;
+@hexagon-info-text-color: @hexagon-default-text-color;
+@hexagon-info-text-color-hover: @hexagon-default-text-color;
+@hexagon-warning-text-color: @hexagon-default-text-color;
+@hexagon-warning-text-color-hover: @hexagon-default-text-color;
+@hexagon-danger-text-color: @hexagon-default-text-color;
+@hexagon-danger-text-color-hover: @hexagon-default-text-color;
+
 @hexagon-fontmultiply: 0.7;
 
 // *********************************************************** //
@@ -76,8 +89,10 @@
     }
 }
 
-.hexagon-changecolor(@color) {
+.hexagon-changecolor(@color, @contentTextColor) {
     background-color: @color;
+	color: @contentTextColor;
+	
     &:before {
 	border-bottom-color: @color;
     }
@@ -121,44 +136,44 @@
 
 /* Default */
 .hexagon-default {
-    .hexagon-changecolor(@hexagon-default-color);
+    .hexagon-changecolor(@hexagon-default-color, @hexagon-default-text-color);
     &.hexagon-hover:hover {
-	.hexagon-changecolor(@hexagon-default-color-hover);
+	.hexagon-changecolor(@hexagon-default-color-hover, @hexagon-default-text-color-hover);
     }
 }
 /* Primary */
 .hexagon-primary {
-    .hexagon-changecolor(@hexagon-primary-color);
+    .hexagon-changecolor(@hexagon-primary-color, @hexagon-primary-text-color);
     &.hexagon-hover:hover {
-	.hexagon-changecolor(@hexagon-primary-color-hover);
+	.hexagon-changecolor(@hexagon-primary-color-hover, @hexagon-primary-text-color-hover);
     }
 }
 /* Success */
 .hexagon-success {
-    .hexagon-changecolor(@hexagon-success-color);
+    .hexagon-changecolor(@hexagon-success-color, @hexagon-success-text-color);
     &.hexagon-hover:hover {
-	.hexagon-changecolor(@hexagon-success-color-hover);
+	.hexagon-changecolor(@hexagon-success-color-hover, @hexagon-success-text-color-hover);
     }
 }
 /* Info */
 .hexagon-info {
-    .hexagon-changecolor(@hexagon-info-color);
+    .hexagon-changecolor(@hexagon-info-color, @hexagon-info-text-color);
     &.hexagon-hover:hover {
-	.hexagon-changecolor(@hexagon-info-color-hover);
+	.hexagon-changecolor(@hexagon-info-color-hover, @hexagon-info-text-color-hover);
     }
 }
 /* Warning */
 .hexagon-warning {
-    .hexagon-changecolor(@hexagon-warning-color);
+    .hexagon-changecolor(@hexagon-warning-color, @hexagon-warning-text-color);
     &.hexagon-hover:hover {
-	.hexagon-changecolor(@hexagon-warning-color-hover);
+	.hexagon-changecolor(@hexagon-warning-color-hover, @hexagon-warning-text-color-hover);
     }
 }
 /* Danger */
 .hexagon-danger {
-    .hexagon-changecolor(@hexagon-danger-color);
+    .hexagon-changecolor(@hexagon-danger-color, @hexagon-danger-text-color);
     &.hexagon-hover:hover {
-	.hexagon-changecolor(@hexagon-danger-color-hover);
+	.hexagon-changecolor(@hexagon-danger-color-hover, @hexagon-danger-text-color-hover);
     }
 }
 
