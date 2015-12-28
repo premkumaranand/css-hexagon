@@ -10,6 +10,11 @@
 @hexagon-lg: 88px;
 @hexagon-xl: 120px;
 
+.hexagon-width(@hexSide) {
+	@radius: @side * 0.86602540378;
+	width: @radius * 2;
+}
+
 @hexagon-default-color: #ebebeb;
 @hexagon-default-color-hover: #cccccc;
 @hexagon-primary-color: #428bca;
@@ -47,7 +52,7 @@
     .hexagon-content(@side);
     @radius: @side * 0.86602540378;
     margin: (@side / 2) 0;
-    width: @radius * 2;
+	.hexagon-width(@side);
     height: @side;
     background-color: @color;
     position: relative;
