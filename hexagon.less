@@ -89,10 +89,12 @@
     }
 }
 
-.hexagon-changecolor(@color, @contentTextColor) {
+.hexagon-changecolor(@color, @contentTextColor, @contentTextColorHover) {
     background-color: @color;
 	color: @contentTextColor;
-	
+	&:hover {
+		color: @contentTextColorHover;
+	}
     &:before {
 	border-bottom-color: @color;
     }
@@ -136,42 +138,42 @@
 
 /* Default */
 .hexagon-default {
-    .hexagon-changecolor(@hexagon-default-color, @hexagon-default-text-color);
+    .hexagon-changecolor(@hexagon-default-color, @hexagon-default-text-color, @hexagon-default-text-color-hover);
     &.hexagon-hover:hover {
 	.hexagon-changecolor(@hexagon-default-color-hover, @hexagon-default-text-color-hover);
     }
 }
 /* Primary */
 .hexagon-primary {
-    .hexagon-changecolor(@hexagon-primary-color, @hexagon-primary-text-color);
+    .hexagon-changecolor(@hexagon-primary-color, @hexagon-primary-text-color, @hexagon-primary-text-color-hover);
     &.hexagon-hover:hover {
 	.hexagon-changecolor(@hexagon-primary-color-hover, @hexagon-primary-text-color-hover);
     }
 }
 /* Success */
 .hexagon-success {
-    .hexagon-changecolor(@hexagon-success-color, @hexagon-success-text-color);
+    .hexagon-changecolor(@hexagon-success-color, @hexagon-success-text-color, @hexagon-success-text-color-hover);
     &.hexagon-hover:hover {
 	.hexagon-changecolor(@hexagon-success-color-hover, @hexagon-success-text-color-hover);
     }
 }
 /* Info */
 .hexagon-info {
-    .hexagon-changecolor(@hexagon-info-color, @hexagon-info-text-color);
+    .hexagon-changecolor(@hexagon-info-color, @hexagon-info-text-color, @hexagon-info-text-color-hover);
     &.hexagon-hover:hover {
 	.hexagon-changecolor(@hexagon-info-color-hover, @hexagon-info-text-color-hover);
     }
 }
 /* Warning */
 .hexagon-warning {
-    .hexagon-changecolor(@hexagon-warning-color, @hexagon-warning-text-color);
+    .hexagon-changecolor(@hexagon-warning-color, @hexagon-warning-text-color, @hexagon-warning-text-color-hover);
     &.hexagon-hover:hover {
 	.hexagon-changecolor(@hexagon-warning-color-hover, @hexagon-warning-text-color-hover);
     }
 }
 /* Danger */
 .hexagon-danger {
-    .hexagon-changecolor(@hexagon-danger-color, @hexagon-danger-text-color);
+    .hexagon-changecolor(@hexagon-danger-color, @hexagon-danger-text-color, @hexagon-danger-text-color-hover);
     &.hexagon-hover:hover {
 	.hexagon-changecolor(@hexagon-danger-color-hover, @hexagon-danger-text-color-hover);
     }
